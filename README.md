@@ -1,17 +1,24 @@
-*Like Next.js/Nuxt but as do-one-thing-do-it-well Vite plugin.*
+# Reproduction for [Vite #11145](https://github.com/vitejs/vite/pull/11145).
 
-Intro & docs: [vite-plugin-ssr.com](https://vite-plugin-ssr.com)
-<br/>
-Examples (official): [examples/](https://github.com/brillout/vite-plugin-ssr/tree/main/examples)
-<br/>
-Examples (community): [examples/README.md](https://github.com/brillout/vite-plugin-ssr/tree/main/examples#community-examples)
+```bash
+git clone git@github.com:brillout/vite-reprod-11145
+cd vite-reprod-11145/
+pnpm install
+cd docs/
+pnpm run dev
+```
 
-Version history (& breaking changes): [CHANGELOG.md](/CHANGELOG.md)
+Same as single line (copy-paste me):
 
-Follow: [Twitter > @brillout](https://twitter.com/brillout)
-<br/>
-Discussions: <a href="https://discord.com/invite/dSDMGGJZQy">Discord > Cubes<img src="/docs/images/icons/hash.svg" height="17" width="23" valign="text-bottom" alt="hash"/>vite-plugin-ssr</a>
-<br/>
-Help: [GitHub Discussions](https://github.com/brillout/vite-plugin-ssr/discussions)
+```shell
+git clone git@github.com:brillout/vite-reprod-11145 && cd vite-reprod-11145/ && pnpm install && cd docs/ && pnpm run dev
+```
 
-Sponsor: [GitHub Sponsorship](https://github.com/sponsors/brillout)
+Go to `http://localhost:3000` and observe the error:
+
+```
+Error: Cannot import non-asset file /../node_modules/@brillout/docpress/src/renderer/_default.page.server.tsx which is inside /public.JS/CSS files inside /public are copied as-is on build and can only be referenced via <script src> or <link href> in html.
+    at TransformContext.transform (file:///home/romuuu/.prog/files/code/vite-plugin-ssr/node_modules/.pnpm/vite@3.2.4_@types+node@15.14.9/node_modules/vite/dist/node/chunks/dep-67e7f8ab.js:36967:31)
+    at async Object.transform (file:///home/romuuu/.prog/files/code/vite-plugin-ssr/node_modules/.pnpm/vite@3.2.4_@types+node@15.14.9/node_modules/vite/dist/node/chunks/dep-67e7f8ab.js:40228:30)
+    at async loadAndTransform (file:///home/romuuu/.prog/files/code/vite-plugin-ssr/node_modules/.pnpm/vite@3.2.4_@types+node@15.14.9/node_modules/vite/dist/node/chunks/dep-67e7f8ab.js:36615:29)
+```
