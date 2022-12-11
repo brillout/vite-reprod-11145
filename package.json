@@ -46,8 +46,7 @@
   },
   "pnpm": {
     "overrides": {
-      "vite-plugin-ssr": "link:./vite-plugin-ssr/",
-      "@brillout/docpress>vite": "npm:@brillout/vite@3.2.4-patch.11145"
+      "vite-plugin-ssr": "link:./vite-plugin-ssr/"
     },
     "packageExtensions": {
       "@apollo/client": {

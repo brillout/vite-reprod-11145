@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 overrides:
   vite-plugin-ssr: link:./vite-plugin-ssr/
-  '@brillout/docpress>vite': npm:@brillout/vite@3.2.4-patch.11145
 
 packageExtensionsChecksum: f050d50401848e89704474c6985d439e
 
@@ -1896,7 +1895,7 @@ packages:
       '@mdx-js/mdx': 2.1.1
       '@mdx-js/react': 2.1.2_react@18.2.0
       '@mdx-js/rollup': 2.1.1
-      '@vitejs/plugin-react': 2.2.0_hc3pa2izmtcygwntmnrkctvt2m
+      '@vitejs/plugin-react': 2.2.0_vite@3.2.4
       balloon-css: 1.2.0
       express: 4.18.1
       react: 18.2.0
@@ -1905,7 +1904,7 @@ packages:
       remark-gfm: 3.0.1
       shiki: 0.10.1
       twemoji: 13.1.1
-      vite: /@brillout/vite/3.2.4-patch.11145_@types+node@15.14.9
+      vite: 3.2.4_@types+node@15.14.9
       vite-plugin-ssr: link:vite-plugin-ssr
     transitivePeerDependencies:
       - '@types/node'
@@ -2009,40 +2008,6 @@ packages:
 
   /@brillout/vite-plugin-import-build/0.1.0:
     resolution: {integrity: sha512-zn90Jwy9TKrBSB45ikPMmxvnGRRfrreeGKtb0DWbKrxlFf+0dOPSmPxxgO7EKBahQJAC8XxeUSMKcPwPmR1b4Q==}
-    dev: false
-
-  /@brillout/vite/3.2.4-patch.11145_@types+node@15.14.9:
-    resolution: {integrity: sha512-+b6cT+T2rmvtpV2gNO7KiBTK95v1Y0oUgJATVi9b10pfAwMnT9/IdYPDLNxgNJjACKss6ILAaSXtWxbPUo2wFg==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 15.14.9
-      esbuild: 0.15.9
-      postcss: 8.4.19
-      resolve: 1.22.1
-      rollup: 2.79.1
-    optionalDependencies:
-      fsevents: 2.3.2
     dev: false
 
   /@cloudflare/kv-asset-handler/0.2.0:
@@ -2814,24 +2779,6 @@ packages:
       magic-string: 0.26.2
       react-refresh: 0.14.0
       vite: 3.0.9
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@vitejs/plugin-react/2.2.0_hc3pa2izmtcygwntmnrkctvt2m:
-    resolution: {integrity: sha512-FFpefhvExd1toVRlokZgxgy2JtnBOdp4ZDsq7ldCWaqGSGn9UhWMAVm/1lxPL14JfNS5yGz+s9yFrQY6shoStA==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    peerDependencies:
-      vite: ^3.0.0
-    dependencies:
-      '@babel/core': 7.20.5
-      '@babel/plugin-transform-react-jsx': 7.19.0_@babel+core@7.20.5
-      '@babel/plugin-transform-react-jsx-development': 7.18.6_@babel+core@7.20.5
-      '@babel/plugin-transform-react-jsx-self': 7.18.6_@babel+core@7.20.5
-      '@babel/plugin-transform-react-jsx-source': 7.19.6_@babel+core@7.20.5
-      magic-string: 0.26.7
-      react-refresh: 0.14.0
-      vite: /@brillout/vite/3.2.4-patch.11145_@types+node@15.14.9
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -8925,6 +8872,40 @@ packages:
       terser:
         optional: true
     dependencies:
+      esbuild: 0.15.9
+      postcss: 8.4.19
+      resolve: 1.22.1
+      rollup: 2.79.1
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: false
+
+  /vite/3.2.4_@types+node@15.14.9:
+    resolution: {integrity: sha512-Z2X6SRAffOUYTa+sLy3NQ7nlHFU100xwanq1WDwqaiFiCe+25zdxP1TfCS5ojPV2oDDcXudHIoPnI1Z/66B7Yw==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      '@types/node': 15.14.9
       esbuild: 0.15.9
       postcss: 8.4.19
       resolve: 1.22.1
